@@ -1,0 +1,34 @@
+<?php
+$sql = "select * from `blogs`";
+$adapter = new adapter();
+$blogs = $adapter->fetchAll($sql);
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="Model/Skin/css/style.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<?php require_once "View/html/header.phtml" ?>
+		<div class="d-flex">
+			<h1> my blogs</h1>
+			<div class="mx-auto mt-2"> <a href="http://localhost/blog/BlogPost.php?a=add" class="btn btn-primary">Create Blog</a></div>
+		</div>
+		<div class="blogcard" style="">
+			<?php foreach ($blogs as $blog): ?>
+			<div class="card mt-5 ml" style="width: 18rem; ">
+				<img style="height: 12rem;" class="card-img-top" src="View/blog_post/blogimg/<?php echo $blog['image']; ?>" alt="blog image">
+				<div class="card-body">
+					<h5 class="card-title"><?php echo $blog['title']; ?></h5>
+					<p class="card-text"><?php echo $blog['short_description']; ?></p>
+					<a href="http://localhost/blog/BlogListing.php?a=blogdetail&blog_id=<?php echo $blog['blog_id']; ?>" class="btn btn-primary">read more</a><a href="http://localhost/blog/BlogListing.php?a=delete&blog_id=<?php echo $blog['blog_id']; ?>" class="btn btn-primary deleteblog">delete</a>
+				</div>
+			</div>
+			<?php endforeach; ?>
+		</div>
+	</body>
+</html>

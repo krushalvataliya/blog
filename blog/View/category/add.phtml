@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link type="text/css" rel="stylesheet" href="Model/Skin/css/style.css">
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+  <form action="http://localhost/blog/Cetegory.php?a=insert" method="POST">
+    <h1>add category</h1>
+    <label ><b>title</b></label>
+    <input type="text" name="category[title]" required>
+    <label ><b>status</b></label>
+    <select name="category[status]" id="gender" >
+  <option value="active"name="active">active</option>
+  <option value="inactive"name="inactive">inactive</option>
+</select>	
+
+    <button type="submit" class="btn">add</button>
+    <a href="http://localhost/blog/BlogListing.php?a=grid">Close</a>
+  </form>
+</body>
+</html>

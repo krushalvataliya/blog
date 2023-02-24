@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="Model/Skin/css/style.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<?php require_once "View/html/header.phtml" ?>
+		<div class="d-flex justify-content-center">
+		<form action="http://localhost/blog/Login.php?a=velidate" method="POST">
+			<br>
+			<br>
+			<br>
+			<!-- Email input -->
+			<div class="form-outline mb-4 ">
+				<label class="form-label" for="form2Example1">Email address</label>
+				<input type="email" name="email" id="form2Example1" class="form-control w-250" />
+			</div>
+			<!-- Password input -->
+			<div class="form-outline mb-4">
+				<label class="form-label" for="form2Example2">Password</label>
+				<input type="password" name="password" id="form2Example2" class="form-control w-250" />
+			</div>
+			<!-- 2 column grid layout for inline styling -->
+			
+			<!-- Submit button -->
+			<button type="submit" class="btn btn-primary btn-block mb-4">Log in</button>
+			<!-- Register buttons -->
+			<div class="text-center">
+				<p>Not a member? <a href="http://localhost/blog/Login.php?a=register">Register</a></p>
+				
+				</button>
+			</div>
+		</form>
+		</div>
+	</body>
+</html>
